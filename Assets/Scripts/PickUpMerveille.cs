@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PickUpMerveille : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class PickUpMerveille : MonoBehaviour
         {
             // Enregistrer le nombre de pieces gagnees
             Inventory.instance.Addcoins(Valeur_merveille);
+            SceneManager.LoadScene(2);
         }
     }
 }

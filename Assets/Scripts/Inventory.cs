@@ -6,18 +6,23 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     public int coinsCount;
+    public int shield;
+    public int fuel;
+    public int oxygen;
+    public int motor;
     public Text coinsCountText;
 
     public static Inventory instance;
 
     void Start()
     {
-        coinsCount=PlayerPrefs.GetInt("totalCoins");
+        //coinsCount=PlayerPrefs.GetInt("totalCoins");
         coinsCountText.text = coinsCount.ToString();
     }
     
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         if (instance != null)
         {
             Debug.LogWarning("+ d'un inventaire");
@@ -25,6 +30,7 @@ public class Inventory : MonoBehaviour
         }
         instance = this;
         PlayerPrefs.SetInt("totalCoins", coinsCount);
+        coinsCountText.text = coinsCount.ToString();
      }
 
     public void Addcoins(int count)

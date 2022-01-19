@@ -20,7 +20,7 @@ public class SettingsMenu : MonoBehaviour
         int currentResolutionIndex = 0;
         for (int i = 0; i < resolutions.Length; i++)
         {
-            string option = resolutions[i].width + " x " + resolutions[i].height;
+            string option = resolutions[i].width + " x "+ resolutions[i].height +" @ " +resolutions[i].refreshRate + " Hz";
             options.Add(option);
 
             if(resolutions[i].width == Screen.currentResolution.width && resolutions[i].height == Screen.currentResolution.height){
@@ -32,9 +32,13 @@ public class SettingsMenu : MonoBehaviour
         resolutionDropdown.RefreshShownValue();
     }
 
-    public void SetVolume(float volume){
-        audioMixer.SetFloat("volume", volume);
+    public void SetVolume(float decimalVolume){
+    var dbVolume = Mathf.Log10(decimalVolume) * 20;
+    if (decimalVolume == 0.0f){
+        dbVolume = -80.0f;
     }
+    audioMixer.SetFloat("volume", dbVolume);
+}
 
     public void SetFullscreen (bool isFullscreen){
         Screen.fullScreen = isFullscreen;

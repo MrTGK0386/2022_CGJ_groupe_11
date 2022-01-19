@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -20,6 +22,10 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Horizontal"))
         {
             rb.velocity = new Vector3();
+        }
+        if (Input.GetKeyDown("escape"))
+        {
+            SceneManager.LoadScene(2);
         }
     }
 }

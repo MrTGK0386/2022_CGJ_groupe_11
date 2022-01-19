@@ -13,12 +13,12 @@ public class Inventory : MonoBehaviour
     public Text coinsCountText;
 
     public static Inventory instance;
-
+/*
     void Start()
     {   
         //coinsCount=PlayerPrefs.GetInt("totalCoins");
         coinsCountText.text = coinsCount.ToString();
-    }
+    }*/
     
     private void Awake()
     {

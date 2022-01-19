@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -15,11 +16,15 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {   
         float dirX = Input.GetAxis("Horizontal");
-        rb.velocity = new Vector2(dirX * 7f, rb.velocity.y);
+        rb.velocity = new Vector2(dirX * 6f, rb.velocity.y);
         
         if (Input.GetButtonDown("Horizontal"))
         {
             rb.velocity = new Vector3();
+        }
+        if (Input.GetButtonDown("escape"))
+        {
+            SceneManager.LoadScene(2);
         }
     }
 }

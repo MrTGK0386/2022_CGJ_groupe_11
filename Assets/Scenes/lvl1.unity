@@ -1949,7 +1949,7 @@ GameObject:
   - component: {fileID: 1718242469}
   m_Layer: 0
   m_Name: Audio Source
-  m_TagString: Untagged
+  m_TagString: LevelMusic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1963,8 +1963,8 @@ AudioSource:
   m_GameObject: {fileID: 1718242468}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 10b93862a4dcfa74ca0f5ebc6a82a437, type: 2}
-  m_audioClip: {fileID: 8300000, guid: b298d12e41f5b2b478383f54ea89d131, type: 3}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: dec9ee9dc72d8ce48868de0a6392c5d9, type: 2}
+  m_audioClip: {fileID: 8300000, guid: e83b6c69af5d5884ca31141c08bf11a5, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

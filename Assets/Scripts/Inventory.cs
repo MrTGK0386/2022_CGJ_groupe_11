@@ -15,7 +15,7 @@ public class Inventory : MonoBehaviour
     public static Inventory instance;
 
     void Start()
-    {
+    {   
         //coinsCount=PlayerPrefs.GetInt("totalCoins");
         coinsCountText.text = coinsCount.ToString();
     }
@@ -29,8 +29,8 @@ public class Inventory : MonoBehaviour
             return;
         }
         instance = this;
-        PlayerPrefs.SetInt("totalCoins", coinsCount);
-        coinsCountText.text = coinsCount.ToString();
+        //PlayerPrefs.SetInt("totalCoins", coinsCount);
+        //coinsCountText.text = coinsCount.ToString();
      }
 
     public void Addcoins(int count)

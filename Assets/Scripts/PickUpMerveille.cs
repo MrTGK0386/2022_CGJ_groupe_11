@@ -1,18 +1,18 @@
-using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class PickUpMerveille : MonoBehaviour
 {
-    public int Valeur_merveille;
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    // Start is called before the first frame update
+    void Start()
     {
-        if (collision.CompareTag("Player"))
-        {
-            // Enregistrer le nombre de pieces gagnees
-            Inventory.instance.Addcoins(Valeur_merveille);
-            SceneManager.LoadScene(2);
-        }
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }

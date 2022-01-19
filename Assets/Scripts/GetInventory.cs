@@ -8,7 +8,7 @@ public class GetInventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       Inventory.instance.coinsCountText = gameObject.GetComponent<Text>();
+       //Inventory.instance.coinsCountText = gameObject.GetComponent<Text>();
     }
 
     // Update is called once per frame
